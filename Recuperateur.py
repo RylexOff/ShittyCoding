@@ -21,7 +21,6 @@ h2_content = ' '.join(div_info_top.find('h2').text.replace('\n', ' ').split()).s
 
 folder_name = clean_folder_name(h2_content)
 
-# Vérifier si le dossier existe et ajouter un numéro d'incrémentation au début si nécessaire
 folder_increment = 1
 while os.path.exists(folder_name):
     folder_name = f"{folder_increment}-{clean_folder_name(h2_content)}"
